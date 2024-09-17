@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Cards Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        #video-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 2rem;
+        }
+
+        .video-card {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 30%;
+            margin-bottom: 2rem;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .video-card h3 {
+            margin: 1rem 0 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .video-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        iframe {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .hidden-content {
+            display: none;
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+        }
+
+        .show-more-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        .show-more-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Web Neural Infotech Video Cards</h1>
+        <p>Your place to explore amazing video content.</p>
+    </header>
+
+    <section id="video-section">
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/TyZ9Qwwfthg" allowfullscreen></iframe>
+            <h3>AI Solutions
+            </h3>
+            <p>Transform Your Business with Cutting-Edge Web and AI Solutions
+            </p>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/ng6qJscdyug" allowfullscreen></iframe>
+            <h3>Future of Technology</h3>
+            <p>Experience the Future of Technology with Web Neural Infotech</p>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/PQWpOjTAEL8" allowfullscreen></iframe>
+            <h3>Web Neural Infotech</h3>
+            <p>Innovating India, Empowering the World</p>
+        </div>
+    </section>
+
+    <button class="show-more-btn" onclick="showMoreContent()">Show More Content</button>
+
+    <div id="extra-content" class="hidden-content">
+        <h2>More Amazing Content Coming Soon!</h2>
+        <p>Stay tuned for more videos and exciting features on our platform. We constantly update with fresh content for you to enjoy.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Video Cards. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showMoreContent() {
+            var content = document.getElementById("extra-content");
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                document.querySelector('.show-more-btn').style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>
